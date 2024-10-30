@@ -4,17 +4,20 @@
 #include <iostream>
 #include <vector>
 
-int main() {
+int main() 
+{
     std::vector<Animal*> animals;
     
     animals.push_back(new Dog("Buddy"));
     animals.push_back(new Cat("Whiskers"));
 
-    for (const auto& animal : animals) {
+    for (const auto& animal : animals) 
+    {
         animal->makeSound();
     }
 
-    for (auto& animal : animals) {
+    for (auto& animal : animals) 
+    {
         delete animal;
     }
 

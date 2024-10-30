@@ -3,16 +3,16 @@
 
 #include <string>
 
-// Base class
-class Animal {
-public:
-    Animal(const std::string& name);
-    virtual ~Animal();  // Virtual destructor for polymorphism
+class Animal 
+{
+    protected:
+        std::string name;
 
-    virtual void makeSound() const = 0;  // Pure virtual function
+    public:
+        Animal(const std::string& name);
+        virtual ~Animal();
 
-protected:
-    std::string name;
+        virtual void makeSound() const = 0;
 };
 
 #endif
